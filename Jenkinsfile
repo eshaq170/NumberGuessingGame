@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                bat 'pip install pytest'
+                bat 'pip install -r requirements.txt'
             }
         }
         stage('Run Tests') {
@@ -21,9 +21,9 @@ pipeline {
                 bat 'docker build -t number-guessing-game .'
             }
         }
-        stage('Build') {
+        stage('Run Docker Container') {
             steps {
-                bat 'echo Build Successful'
+                bat 'docker run --name number-guessing-container number-guessing-game'
             }
         }
     }
