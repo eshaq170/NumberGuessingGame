@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Number Guessing Game
 
 A simple number guessing game in Python. 
@@ -11,3 +12,7 @@ A simple number guessing game in Python.
 Run the following command:
 ```bash
 pytest
+=======
+# NumberGuessingGame
+this is a simple game that asks user to to guess a number between 1 and 100
+>>>>>>> 977d7d51edfbae2109d0f359cd04bf6044ce7bbc
