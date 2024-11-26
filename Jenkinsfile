@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/eshaq170/NumberGuessingGame.git'
+                git branch: 'main', url:'https://github.com/eshaq170/NumberGuessingGame.git'
             }
         }
         stage('Install Dependencies') {
