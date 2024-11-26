@@ -8,17 +8,22 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip install pytest'
+                bat 'pip install pytest'
             }
         }
         stage('Run Tests') {
             steps {
-                sh 'pytest'
+                bat 'pytest'
             }
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t number-guessing-game .'
+                bat 'docker build -t number-guessing-game .'
+            }
+        }
+        stage('Build') {
+            steps {
+                bat 'echo Build Successful'
             }
         }
     }
