@@ -22,13 +22,13 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 // Build Docker image
-                sh 'C://Program Files/Docker/Docker/resources/bin/docker.exe build -t number-guessing-game .'
+                sh '"C://Program Files/Docker/Docker/resources/bin/docker.exe" build -t number-guessing-game .'
             }
         }
         stage('Run Docker Container') {
             steps {
                 // Run Docker container for the game
-                sh 'dC://Program Files/Docker/Docker/resources/bin/docker.exe run --name number-guessing-container number-guessing-game'
+                sh '"C://Program Files/Docker/Docker/resources/bin/docker.exe" run --name number-guessing-container number-guessing-game'
             }
         }
     }
