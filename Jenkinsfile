@@ -10,25 +10,25 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Install Python dependencies
-                powershell 'pip install pytest'
+                sh 'pip install pytest'
             }
         }
         stage('Run Tests') {
             steps {
                 // Run unit tests using pytest
-                powershell 'pytest'
+               sh 'pytest'
             }
         }
         stage('Build Docker Image') {
             steps {
                 // Build Docker image
-                powershell 'docker build -t number-guessing-game .'
+                sh 'docker build -t number-guessing-game .'
             }
         }
         stage('Run Docker Container') {
             steps {
                 // Run Docker container for the game
-                powershell 'docker run --name number-guessing-container number-guessing-game'
+                sh 'docker run --name number-guessing-container number-guessing-game'
             }
         }
     }
