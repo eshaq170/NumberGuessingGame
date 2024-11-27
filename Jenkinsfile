@@ -10,7 +10,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Install Python dependencies
-                powershell 'pip install -r requirements.txt'
+                powershell 'pip install pytestt'
             }
         }
         stage('Run Tests') {
