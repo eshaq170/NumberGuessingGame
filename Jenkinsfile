@@ -10,13 +10,13 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Install Python dependencies
-                sh 'pip install pytest'
+                sh 'C://Users/sadat/AppData/Local/Programs/Python/Python311/Scripts/pip.exe install pytest'
             }
         }
         stage('Run Tests') {
             steps {
                 // Run unit tests using pytest
-               sh 'pytest'
+               sh 'C://Users/sadat/AppData/Local/Programs/Python/Python311/Scripts/pytest.exe'
             }
         }
         stage('Build Docker Image') {
