@@ -31,25 +31,6 @@ pipeline {
                 sh '"C://Program Files/Docker/Docker/resources/bin/docker.exe" run --name number-guessing-container number-guessing-game'
             }
         }
-        post {
-        success {
-            emailext to: 'eshaqcsfku336@gmail.com',
-                     subject: 'Build Successful: ${env.Number Guessing Game} [${env.06}]',
-                     body: """
-                     Good news!
-                     The build was successful.
-                     """
-        }
-        failure {
-            emailext to: 'eshaqcsfku336@gmail.com',
-                     subject: 'Build Failed: ${env.Number Guessing Game} [${env.05}',
-                     body: """
-                     Unfortunately, the build failed.
-                     
-                     """
-        }
     }
 }
-    }
-
 
